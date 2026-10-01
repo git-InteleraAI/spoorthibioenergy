@@ -276,7 +276,6 @@ function About() {
 /* ---------------- Services / Core Competencies ---------------- */
 function Services() {
   const services = [
-    { icon: FlaskConical, title: "RDBM Technology", body: "Comprehensive lab services including BMP testing, SMA analysis and 22+ analytical protocols." },
     { icon: Droplets, title: "Water & Wastewater", body: "End-to-end water treatment solutions covering STP, ETP, RO, ZLD, MLD and ATFD systems." },
     { icon: Recycle, title: "Digestate Management", body: "Digestate is the nutrient-rich residual material generated from the anaerobic digestion (AD) process." },
     { icon: Beaker, title: "Biogas Lab Services", body: "COMBIOgas H₂S, DMC and more sampling solutions for tailor-made organic waste management." },
