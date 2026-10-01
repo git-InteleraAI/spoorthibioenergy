@@ -1,8 +1,9 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import {
-  Leaf, Menu, X, ChevronDown, Facebook, Twitter, Instagram, Linkedin, Youtube,
+  Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube,
 } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 export const navItems = [
   { label: "Home", href: "/" },
@@ -56,10 +57,12 @@ export function Header() {
       </div>
 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="grid h-11 w-11 place-items-center rounded-full bg-gradient-emerald shadow-glow group-hover:scale-110 transition-transform">
-            <Leaf className="h-5 w-5 text-primary-foreground" />
-          </div>
+        <Link to="/" className="flex items-center gap-3.5 group">
+          <img
+            src={logoImg}
+            alt="Sphoorthi Bio Energy SBPL Logo"
+            className="h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_10px_rgba(34,197,94,0.35)]"
+          />
           <div className="leading-tight">
             <div className="text-base font-black tracking-[0.2em] text-gradient-emerald">SPHOORTHI</div>
             <div className="text-[9px] uppercase tracking-[0.35em] text-muted-foreground">BIO ENERGY</div>

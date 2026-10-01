@@ -1,15 +1,18 @@
 import { Link } from "@tanstack/react-router";
-import { Leaf, MapPin, Phone, Mail, Linkedin, Twitter, Instagram, Facebook, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin, Twitter, Instagram, Facebook, Youtube } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 export function Footer() {
   return (
     <footer id="contact" className="mt-32 border-t border-border bg-forest-deep/60 backdrop-blur">
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12 lg:grid-cols-5">
         <div className="lg:col-span-2">
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-emerald shadow-glow group-hover:scale-105 transition-transform">
-              <Leaf className="h-5 w-5 text-primary-foreground" />
-            </div>
+          <Link to="/" className="flex items-center gap-3.5 group">
+            <img
+              src={logoImg}
+              alt="Sphoorthi Bio Energy SBPL Logo"
+              className="h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_10px_rgba(34,197,94,0.35)]"
+            />
             <div>
               <div className="text-base font-bold tracking-widest text-gradient-emerald">SPHOORTHI</div>
               <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">BIO ENERGY</div>

@@ -16,6 +16,7 @@ import smartPlant from "@/assets/smart-plant.png";
 import farmField from "@/assets/farm-field.png";
 import blueprint from "@/assets/blueprint.png";
 import heroBgImage from "@/assets/hero-bg.png";
+import logoImg from "@/assets/logo.png";
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -110,9 +111,10 @@ function Hero() {
       <div className="mx-auto w-full max-w-5xl px-6 items-center">
         {/* LEFT — headline + CTA */}
         <div className="relative z-10">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-background/80 backdrop-blur-md px-4 py-2 shadow-sm animate-rise">
-            <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-xs font-semibold text-foreground tracking-wide">Renewable Energy Solutions</span>
+          <div className="mb-6 inline-flex items-center gap-2.5 rounded-full bg-background/80 backdrop-blur-md px-4 py-2 border border-primary/20 shadow-sm animate-rise">
+            <img src={logoImg} alt="SBPL Logo" className="h-5 w-auto object-contain filter drop-shadow-[0_1px_4px_rgba(34,197,94,0.4)]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+            <span className="text-xs font-semibold text-foreground tracking-wide">Sphoorthi Bioenergy (SBPL) — Renewable Energy Solutions</span>
           </div>
           
           <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-black leading-[1.05] tracking-tight">
