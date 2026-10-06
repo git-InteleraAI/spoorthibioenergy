@@ -355,9 +355,9 @@ function BlueprintFlow() {
 /* ---------------- Projects ---------------- */
 function Projects() {
   const projects = [
-    { img: fujiAsset.url, tag: "Waste-to-Energy", title: "Fuji Industrial Bio-Plant", loc: "Shizuoka, Japan", stat: "12 MW" },
-    { img: smartAsset.url, tag: "Smart Utility", title: "Urban Wastewater Grid", loc: "Hyderabad, India", stat: "40 MLD" },
-    { img: farmAsset.url, tag: "Agri Circular", title: "Precision Biomass Collection", loc: "Punjab Belt", stat: "68K T/yr" },
+    { img: fujiAsset.url, tag: "Waste-to-Energy", title: "Bio-Energy", loc: "Shizuoka, Japan", stat: "12 MW" },
+    { img: smartAsset.url, tag: "Smart Utility", title: "Wastewater treatment", loc: "Hyderabad, India", stat: "40 MLD" },
+    { img: farmAsset.url, tag: "Agri Circular", title: "Biomass cultivation and harvesting", loc: "Punjab Belt", stat: "68K T/yr" },
   ];
   return (
     <section id="projects" className="mx-auto max-w-7xl px-6">
@@ -456,13 +456,12 @@ function Sustainability() {
             Ready to transform waste <span className="text-gradient-gold">into energy</span>?
           </h2>
           <p className="mt-4 text-muted-foreground">
-            We've already diverted 142,000+ tons this year. Join the cities and industries partnering with Sphoorthi Bio Energy.
+            Building a pan-India network of Biogas & CBG plants for a cleaner, more sustainable future.
           </p>
         </div>
 
         <div className="relative mt-10 max-w-3xl mx-auto">
           <div className="flex items-center justify-between text-xs uppercase tracking-widest text-muted-foreground mb-3">
-            <span>142,000 Tons Waste Diverted</span>
             <span className="text-gold">Goal: 200,000</span>
           </div>
           <div className="h-2.5 rounded-full bg-forest-deep border border-border overflow-hidden">

@@ -57,16 +57,15 @@ export function Header() {
       </div>
 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        <Link to="/" className="flex items-center gap-3.5 group">
+        <Link to="/" className="flex items-center gap-3.5 group shrink-0">
           <img
             src={logoImg}
-            alt="Sphoorthi Bio Energy SBPL Logo"
-            className="h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_10px_rgba(34,197,94,0.35)]"
+            alt="Sphoorthi Bioenergy Private Limited Logo"
+            className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_10px_rgba(34,197,94,0.35)]"
           />
-          <div className="leading-tight">
-            <div className="text-base font-black tracking-[0.2em] text-gradient-emerald">SPHOORTHI</div>
-            <div className="text-[9px] uppercase tracking-[0.35em] text-muted-foreground">BIO ENERGY</div>
-          </div>
+          <span className="text-sm font-bold tracking-wide text-gradient-emerald whitespace-nowrap">
+            Sphoorthi Bioenergy Private Limited
+          </span>
         </Link>
         <nav className="hidden lg:flex items-center gap-7">
           {navItems.map((n) => {

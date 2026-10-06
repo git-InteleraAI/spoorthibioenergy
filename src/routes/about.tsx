@@ -13,6 +13,7 @@ import { useTilt3D } from "@/hooks/use-tilt";
 import { useMagnetic } from "@/hooks/use-magnetic";
 import blueprint from "@/assets/blueprint.png";
 import farmField from "@/assets/farm-field.png";
+import drVishnuImg from "@/assets/dr-vishnu-vardhan-rao.jpg";
 import drPeeraImg from "@/assets/dr-peera-kutagolla.jpg";
 import drSrinivasImg from "@/assets/dr-srinivas-jukuri.jpg";
 
@@ -50,6 +51,7 @@ const leadershipProfiles: LeaderProfile[] = [
     designation: "Chairman & Managing Director — Sphoorthi Bioenergy Pvt. Ltd.",
     avatarText: "VVR",
     bgGradient: "from-emerald-600 to-teal-800",
+    image: drVishnuImg,
     shortSummary:
       "Visionary entrepreneur with 41 years of diversified experience across renewable energy, infrastructure, real estate, and technology. Leading end-to-end CBG project incubation, green fuel transition, and rural economic empowerment.",
     highlights: [
@@ -117,11 +119,10 @@ const leadershipProfiles: LeaderProfile[] = [
     avatarText: "DSJ",
     bgGradient: "from-amber-600 to-emerald-800",
     image: drSrinivasImg,
-    imagePosition: "object-top",
     shortSummary:
       "Biogas & CBG technologist with 15+ years experience across XLNC Enviro, Mahindra Waste to Energy, CSIR-IICT, and BITS Pilani. Inventor of the AI-enabled RBHM (Real-time Biodigester Health Monitoring) Technology.",
     highlights: [
-      "Ph.D. in Biotechnology (Engineering) from JNTU Hyderabad",
+      "Ph.D. in Biogas-CBG (Engineering) from JNTU Hyderabad",
       "15+ Years Industrial Biogas & CBG Engineering Leadership",
       "Inventor of AI-enabled RBHM (Real-time Biodigester Health Monitoring)",
       "Founder of RENVITEK Solutions",
@@ -483,7 +484,7 @@ function AboutPage() {
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className={`h-24 w-24 rounded-2xl object-cover ${leader.imagePosition || "object-center"} border-2 border-primary/40 shadow-glow mb-6 group-hover:scale-105 transition-transform`}
+                    className={`h-24 w-24 rounded-2xl object-cover ${leader.imagePosition || "object-center"} border-2 border-primary/40 shadow-glow mb-6 group-hover:scale-105 transition-transform bg-black`}
                   />
                 ) : (
                   <div className={`h-24 w-24 rounded-2xl bg-gradient-to-br ${leader.bgGradient} flex items-center justify-center text-white text-2xl font-black shadow-glow mb-6 group-hover:scale-105 transition-transform`}>
@@ -538,7 +539,7 @@ function AboutPage() {
                 <img
                   src={selectedLeader.image}
                   alt={selectedLeader.name}
-                  className={`h-20 w-20 shrink-0 rounded-2xl object-cover ${selectedLeader.imagePosition || "object-center"} border-2 border-primary/40 shadow-glow`}
+                  className={`h-20 w-20 shrink-0 rounded-2xl object-cover ${selectedLeader.imagePosition || "object-center"} border-2 border-primary/40 shadow-glow bg-black`}
                 />
               ) : (
                 <div className={`h-20 w-20 shrink-0 rounded-2xl bg-gradient-to-br ${selectedLeader.bgGradient} flex items-center justify-center text-white text-2xl font-black shadow-glow`}>
@@ -553,14 +554,14 @@ function AboutPage() {
             </div>
 
             {/* Key Highlights */}
-            <div className="mb-8 p-5 rounded-2xl bg-white/5 border border-white/10">
-              <div className="text-xs font-bold text-gold uppercase tracking-widest mb-3 flex items-center gap-2">
-                <Sparkles className="h-4 w-4" /> Key Accomplishments & Leadership Focus
+            <div className="mb-6 p-6 rounded-2xl bg-white/5 border border-white/10">
+              <div className="text-xs font-bold text-gold uppercase tracking-widest mb-4 flex items-center gap-2">
+                <Sparkles className="h-4 w-4 text-gold" /> Key Accomplishments & Leadership Focus
               </div>
-              <div className="grid sm:grid-cols-2 gap-2">
+              <div className="grid sm:grid-cols-2 gap-3">
                 {selectedLeader.highlights.map((hl, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-xs text-foreground/90">
-                    <CheckCircle2 className="h-4 w-4 text-primary shrink-0" />
+                  <div key={idx} className="flex items-start gap-2.5 text-xs text-foreground/90 leading-snug">
+                    <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                     <span>{hl}</span>
                   </div>
                 ))}
@@ -568,13 +569,15 @@ function AboutPage() {
             </div>
 
             {/* Full Biography Paragraphs */}
-            <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-              <div className="text-xs uppercase tracking-widest text-primary font-bold mb-2">Detailed Biography</div>
-              {selectedLeader.fullBio.map((paragraph, pIdx) => (
-                <p key={pIdx} className="bg-forest/20 p-4 rounded-xl border border-white/5 text-foreground/90">
-                  {paragraph}
-                </p>
-              ))}
+            <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+              <div className="text-xs uppercase tracking-widest text-primary font-bold mb-4">Detailed Biography</div>
+              <div className="space-y-3.5 text-sm text-foreground/90 leading-relaxed">
+                {selectedLeader.fullBio.map((paragraph, pIdx) => (
+                  <p key={pIdx}>
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
 
             <div className="mt-8 pt-6 border-t border-border flex justify-end">
