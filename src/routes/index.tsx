@@ -355,9 +355,9 @@ function BlueprintFlow() {
 /* ---------------- Projects ---------------- */
 function Projects() {
   const projects = [
-    { img: fujiAsset.url, tag: "Waste-to-Energy", title: "Bio-Energy", loc: "Shizuoka, Japan", stat: "12 MW" },
-    { img: smartAsset.url, tag: "Smart Utility", title: "Wastewater treatment", loc: "Hyderabad, India", stat: "40 MLD" },
-    { img: farmAsset.url, tag: "Agri Circular", title: "Biomass cultivation and harvesting", loc: "Punjab Belt", stat: "68K T/yr" },
+    { img: fujiAsset.url, title: "Bio-Energy", stat: "12 MW" },
+    { img: smartAsset.url, title: "Wastewater treatment", stat: "40 MLD" },
+    { img: farmAsset.url, title: "Biomass cultivation and harvesting", stat: "68K T/yr" },
   ];
   return (
     <section id="projects" className="mx-auto max-w-7xl px-6">
@@ -379,13 +379,11 @@ function Projects() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-forest-deep via-forest-deep/40 to-transparent" />
             <div className="absolute inset-0 p-7 flex flex-col justify-between">
-              <div className="flex items-center justify-between">
-                <span className="inline-flex items-center gap-2 rounded-full bg-primary/20 border border-primary/40 backdrop-blur px-3 py-1 text-[10px] uppercase tracking-widest text-primary">{p.tag}</span>
+              <div className="flex items-center justify-end">
                 <span className="text-xs text-gold font-semibold">{p.stat}</span>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">{p.loc}</div>
-                <h3 className="mt-2 text-2xl font-bold">{p.title}</h3>
+                <h3 className="text-2xl font-bold">{p.title}</h3>
                 <div className="mt-4 inline-flex items-center gap-2 text-primary text-sm opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all">
                   Case study <ArrowRight className="h-4 w-4" />
                 </div>
